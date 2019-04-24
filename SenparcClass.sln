@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenparcClass", "SenparcClass\SenparcClass.csproj", "{D01816BC-A7AE-4260-AB7C-372AEB10F768}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenparcClassService", "SenparcClassService\SenparcClassService.csproj", "{B4DC8F5E-E5A4-4DD3-AA8F-B6CA53EA382F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D01816BC-A7AE-4260-AB7C-372AEB10F768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D01816BC-A7AE-4260-AB7C-372AEB10F768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D01816BC-A7AE-4260-AB7C-372AEB10F768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D01816BC-A7AE-4260-AB7C-372AEB10F768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4DC8F5E-E5A4-4DD3-AA8F-B6CA53EA382F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4DC8F5E-E5A4-4DD3-AA8F-B6CA53EA382F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4DC8F5E-E5A4-4DD3-AA8F-B6CA53EA382F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4DC8F5E-E5A4-4DD3-AA8F-B6CA53EA382F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8186AC0-DEBF-404C-9078-EE20A6285E6A}
+	EndGlobalSection
+EndGlobal
