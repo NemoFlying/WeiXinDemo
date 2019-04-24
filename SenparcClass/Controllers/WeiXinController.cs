@@ -5,7 +5,11 @@ using System.Threading.Tasks;
 using log4net;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Senparc.Weixin;
 using Senparc.Weixin.MP;
+using Senparc.Weixin.MP.CommonAPIs;
+using Senparc.Weixin.MP.Containers;
+using Senparc.Weixin.MP.Entities.Menu;
 using Senparc.Weixin.MP.Entities.Request;
 using SenparcClassService;
 
@@ -20,7 +24,7 @@ namespace SenparcClass.Controllers
         }
 
         //public static readonly string Token = Config.SenparcWeixinSetting.Token;//与微信公众账号后台的Token设置保持一致，区分大小写。
-        public static readonly string Token = "Senparc20180909";
+        public static readonly string Token = Config.SenparcWeixinSetting.Token;
 
         /// <summary>
         /// 微信后台验证地址（使用Get），微信后台的“接口配置信息”的Url填写如：https://sdk.weixin.senparc.com/weixin
@@ -59,6 +63,47 @@ namespace SenparcClass.Controllers
                 //执行
                 messageHandler.Execute();
                 messageHandler.SaveResponseMessageLog();
+
+                //string accessToken = "Senparc20180909";
+                //AccessTokenContainer.TryGetAccessToken("wxd43ee5d2b9d7873e", "8cd40916c73ba786c6682749bc5b33fe");
+                //ButtonGroup bg = new ButtonGroup();
+
+                ////单击
+                //bg.button.Add(new SingleClickButton()
+                //{
+                //    name = "单击测试",
+                //    key = "OneClick",
+                //   // type = ButtonType.click.ToString(),//默认已经设为此类型，这里只作为演示
+                //});
+
+                ////二级菜单
+                //var subButton = new SubButton()
+                //{
+                //    name = "二级菜单"
+                //};
+                //subButton.sub_button.Add(new SingleClickButton()
+                //{
+                //    key = "SubClickRoot_Text",
+                //    name = "返回文本"
+                //});
+                //subButton.sub_button.Add(new SingleClickButton()
+                //{
+                //    key = "SubClickRoot_News",
+                //    name = "返回图文"
+                //});
+                //subButton.sub_button.Add(new SingleClickButton()
+                //{
+                //    key = "SubClickRoot_Music",
+                //    name = "返回音乐"
+                //});
+                //subButton.sub_button.Add(new SingleViewButton()
+                //{
+                //    url = "http://weixin.senparc.com",
+                //    name = "Url跳转"
+                //});
+                //bg.button.Add(subButton);
+                //var result = CommonApi.CreateMenu(accessToken, bg);
+
                 return Content(messageHandler.FinalResponseDocument.ToString());
 
             }catch(Exception ex)
